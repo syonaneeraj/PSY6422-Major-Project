@@ -17,7 +17,7 @@ names(Data)
 
 #Renaming columns for convenience
 Data2 <- Data%>%
-  rename(serving_0 = None..n.15.166.,serving_1 = X.1.serving.week..n.38.482.,serving_2 = X1.2.servings.week..n.33.210.,serving_3 = X3.6.servings.week..n.15.480.,serving_max = â..1.serving.day..n.4628.) 
+  rename(serving_0 = None..n.15.166.,serving_1 = X.1.serving.week..n.38.482.,serving_2 = X1.2.servings.week..n.33.210.,serving_3 = X3.6.servings.week..n.15.480.,serving_max = Ã¢..1.serving.day..n.4628.) 
 names(Data2)
 
 #slice the dataframe into subsets
@@ -38,7 +38,8 @@ barplot1 <- barplot(mytable1,
         legend.text = dfrace$Factors,
         col = c("burlywood1","coral1","brown","darksalmon","gold"),
         args.legend = list(x = "bottomright",inset = c(- 0.05, 1)))
-png(filename = "C:/Users/Syona Neeraj/Desktop/Data/graphs/barplot1.png")
+#To save the graph, we use
+ggsave("barplot1.png")
 
 #same as above for the diseases subset
 as.matrix.data.frame(df_diseases)
@@ -53,4 +54,5 @@ barplot2 <- barplot(mytable2,
         col=c("bisque1","darksalmon","coral1"),
         args.legend = list(x = "topright",inset = c(- 0.48, 0)))
 
-dev.copy(jpeg,filename="barplot2.jpg")
+ggsave("barplot2.png")
+
