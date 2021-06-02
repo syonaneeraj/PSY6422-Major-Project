@@ -152,7 +152,7 @@ barplot2 <- barplot(mytable2,
 
 ggsave("barplot2.png")
 ```
-
+To save the file, we used the ggsave function above.
 
 <font size="6"> ***Summary*** </font> 
 
